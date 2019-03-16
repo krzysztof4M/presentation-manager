@@ -1,0 +1,9 @@
+.elapsedTime {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.time {
+  margin-left: 10px;
+  font-size: 1.1em;
+}

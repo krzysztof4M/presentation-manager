@@ -1,0 +1,14 @@
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.formBtn {
+  margin-top: 150px;
+}
+
+.textInput {
+  margin-bottom: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}

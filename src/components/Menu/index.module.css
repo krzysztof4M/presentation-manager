@@ -1,0 +1,23 @@
+.menuContainer {
+  background-color: #49a651;
+}
+
+.menu {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  height: 60px;
+  align-items: center;
+}
+
+.menu li + li {
+  padding-left: 20px;
+}
+
+.menuLink {
+  color: #f8f8f8;
+}
+
+.menuLink:hover {
+  text-decoration: underline;
+}
