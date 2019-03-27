@@ -5,7 +5,7 @@ const methods = ['get', 'post', 'put', 'patch', 'delete'];
 export default class ApiClient {
   constructor() {
     methods.forEach((method) =>
-      this[method] = (path, { data } = {}) => {
+      this[method] = (path, { data, signal } = {}) => {
         const requestParams = {
           headers: {
             Accept: 'application/json',
@@ -13,7 +13,8 @@ export default class ApiClient {
             'Content-Type': 'application/json'
           },
           method: method.toUpperCase(),
-          body: JSON.stringify(data)
+          body: JSON.stringify(data),
+          signal
         };
 
         return fetch(API_URL + path, requestParams)

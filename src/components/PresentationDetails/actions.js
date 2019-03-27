@@ -2,8 +2,8 @@ import ApiClient from '../../utils/ApiClient';
 
 const client = new ApiClient();
 
-export function load(ownProps) {
-  return client.get(`/presentations/${ownProps.match.params.id}`)
+export function load(ownProps, signal) {
+  return client.get(`/presentations/${ownProps.match.params.id}`,{ signal })
 }
 
 export function save(presentationId, data) {
