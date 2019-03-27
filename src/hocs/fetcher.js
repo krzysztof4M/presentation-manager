@@ -10,14 +10,21 @@ const fetcher = (
       data: null
     }
 
+    controller = new AbortController();
+
     componentDidMount() {
-      return load(this.props)
+      return load(this.props, this.controller.signal)
         .then(res => {
           this.setState({
             loading: false,
             data: res
           })
         })
+        .catch(e => console.log(e.message));
+    }
+
+    componentWillUnmount() {
+      this.controller.abort();
     }
 
     render() {
